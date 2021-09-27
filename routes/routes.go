@@ -9,5 +9,7 @@ func Setup(router *mux.Router, controllers controllers.Controller) {
 	router.HandleFunc("/", controllers.Hello)
 
 	PostRoutes(router, controllers)
+	AuthRoutes(router, controllers)
+	CommitRoutes(router, controllers)
 	UserRoutes(router, controllers)
 }

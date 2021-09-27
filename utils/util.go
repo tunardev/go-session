@@ -4,10 +4,14 @@ import "strings"
 
 type JError struct {
 	Error string `json:"error"`
+	Success bool `json:"success"`
 }
 
-func NewJError(err error) JError {
-	jerr := JError{"generic error"}
+func NewError(err error) JError {
+	jerr := JError{
+		Error: "generic error",
+		Success: false,
+	}
 	if err != nil {
 		jerr.Error = err.Error()
 	}

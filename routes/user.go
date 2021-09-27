@@ -6,5 +6,7 @@ import (
 )
 
 func UserRoutes(router *mux.Router, controllers controllers.Controller) {
-	router.HandleFunc("/user", controllers.Hello)
+
+	router.HandleFunc("/api/user/follow", controllers.Hello)
+
 }
