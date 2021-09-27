@@ -1,0 +1,12 @@
+module github.com/tunardev/dev-post-server
+
+go 1.16
+
+require (
+	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8 // indirect
+	github.com/gorilla/mux v1.8.0 // indirect
+	github.com/gorilla/sessions v1.2.1 // indirect
+	github.com/kidstuff/mongostore v0.0.0-20181113001930-e650cd85ee4b // indirect
+	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
+)
