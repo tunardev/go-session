@@ -8,10 +8,10 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
 	"github.com/rs/cors"
-	"github.com/tunardev/dev-post-server/controllers"
-	db "github.com/tunardev/dev-post-server/database"
-	"github.com/tunardev/dev-post-server/models"
-	"github.com/tunardev/dev-post-server/routes"
+	"github.com/tunardev/go-session/controllers"
+	db "github.com/tunardev/go-session/database"
+	"github.com/tunardev/go-session/models"
+	"github.com/tunardev/go-session/routes"
 )
 
 var (

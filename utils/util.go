@@ -1,14 +1,13 @@
 package utils
 
-import "strings"
+import (
+	"strings"
 
-type JError struct {
-	Message string `json:"message"`
-	Success bool `json:"success"`
-}
+	"github.com/tunardev/go-session/models"
+)
 
-func NewError(err error, success bool) JError {
-	jerr := JError{
+func NewError(err error, success bool) models.Error {
+	jerr := models.Error{
 		Message: "generic error",
 		Success: false,
 	}

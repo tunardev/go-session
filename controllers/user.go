@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/tunardev/dev-post-server/models"
-	"github.com/tunardev/dev-post-server/utils"
+	"github.com/tunardev/go-session/models"
+	"github.com/tunardev/go-session/utils"
 	"gopkg.in/asaskevich/govalidator.v9"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"

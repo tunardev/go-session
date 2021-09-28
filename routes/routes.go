@@ -2,7 +2,7 @@ package routes
 
 import (
 	"github.com/gorilla/mux"
-	"github.com/tunardev/dev-post-server/controllers"
+	"github.com/tunardev/go-session/controllers"
 )
 
 func Setup(router *mux.Router, controllers controllers.Controller) {
