@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"os"
+	"errors"
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
@@ -12,6 +13,7 @@ import (
 	db "github.com/tunardev/go-session/database"
 	"github.com/tunardev/go-session/models"
 	"github.com/tunardev/go-session/routes"
+	"github.com/tunardev/go-session/utils"
 )
 
 var (
@@ -29,12 +31,7 @@ func main() {
     routes.Setup(router, controller)
 
     router.NotFoundHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-        err := models.Error{
-            Message: "404 not found",
-            Success: false,
-        }
-
-        json.NewEncoder(w).Encode(err)
+       json.NewEncoder(w).Encode(utils.NewError(errors.New("404 not found"), false))
     })
 
     handler := cors.Default().Handler(router)
