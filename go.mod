@@ -8,5 +8,6 @@ require (
 	github.com/gorilla/sessions v1.2.1 // indirect
 	github.com/kidstuff/mongostore v0.0.0-20181113001930-e650cd85ee4b // indirect
 	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+	gopkg.in/asaskevich/govalidator.v9 v9.0.0-20180315120708-ccb8e960c48f // indirect
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
 )

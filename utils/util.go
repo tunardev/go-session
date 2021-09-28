@@ -3,17 +3,17 @@ package utils
 import "strings"
 
 type JError struct {
-	Error string `json:"error"`
+	Message string `json:"message"`
 	Success bool `json:"success"`
 }
 
 func NewError(err error) JError {
 	jerr := JError{
-		Error: "generic error",
+		Message: "generic error",
 		Success: false,
 	}
 	if err != nil {
-		jerr.Error = err.Error()
+		jerr.Message = err.Error()
 	}
 	return jerr
 }

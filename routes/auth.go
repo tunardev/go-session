@@ -7,10 +7,9 @@ import (
 
 func AuthRoutes(router *mux.Router, controllers controllers.Controller) {
 
-	router.HandleFunc("/api/auth/signup", controllers.Hello)
-	router.HandleFunc("/api/auth/signin", controllers.Hello)
-	router.HandleFunc("/api/auth/logout", controllers.Hello)
-	router.HandleFunc("/api/auth/me", controllers.Hello)
-	router.HandleFunc("/api/user/follow", controllers.Hello)
+	router.HandleFunc("/api/auth/signup", controllers.SignUp)
+	router.HandleFunc("/api/auth/signin", controllers.SignIn)
+	router.HandleFunc("/api/auth/logout", controllers.Logout)
+	router.HandleFunc("/api/auth/me", controllers.Me)
 
 }
