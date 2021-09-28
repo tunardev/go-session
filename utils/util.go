@@ -7,15 +7,15 @@ import (
 )
 
 func NewError(err error, success bool) models.Error {
-	jerr := models.Error{
+	newError := models.Error{
 		Message: "generic error",
 		Success: false,
 	}
 	if err != nil {
-		jerr.Message = err.Error()
-		jerr.Success = success 
+		newError.Message = err.Error()
+		newError.Success = success 
 	}
-	return jerr
+	return newError
 }
 
 func NormalizeEmail(email string) string {
