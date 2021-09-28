@@ -7,6 +7,7 @@ import (
 
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
+	"github.com/rs/cors"
 	"github.com/tunardev/dev-post-server/controllers"
 	db "github.com/tunardev/dev-post-server/database"
 	"github.com/tunardev/dev-post-server/models"
@@ -36,7 +37,8 @@ func main() {
         json.NewEncoder(w).Encode(err)
     })
 
-    if err := http.ListenAndServe(":8000", router); err != nil {
+    handler := cors.Default().Handler(router)
+    if err := http.ListenAndServe(":8000", handler); err != nil {
         panic(err)
     }
     

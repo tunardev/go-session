@@ -7,9 +7,8 @@ import (
 
 func Setup(router *mux.Router, controllers controllers.Controller) {
 	router.HandleFunc("/", controllers.Hello)
-
-	PostRoutes(router, controllers)
-	AuthRoutes(router, controllers)
-	CommitRoutes(router, controllers)
-	UserRoutes(router, controllers)
+	router.HandleFunc("/api/auth/signup", controllers.SignUp)
+	router.HandleFunc("/api/auth/signin", controllers.SignIn)
+	router.HandleFunc("/api/auth/logout", controllers.Logout)
+	router.HandleFunc("/api/auth/me", controllers.Me)
 }

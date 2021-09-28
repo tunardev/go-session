@@ -62,8 +62,10 @@ func (c Controller) SignUp(w http.ResponseWriter, r *http.Request) {
 
 	session.Values["authenticated"] = true
 	session.Values["userId"] = newUser.Id.Hex()
-
-	session.Save(r, w)
+ 
+	if err = session.Save(r, w); err != nil {
+		json.NewEncoder(w).Encode(utils.NewError(err, false))
+	}	
 
 	json.NewEncoder(w).Encode(newUser)
      return 
