@@ -3,8 +3,6 @@ module github.com/tunardev/go-session
 go 1.16
 
 require (
-	github.com/boj/redistore v0.0.0-20180917114910-cd5dcc76aeff // indirect
-	github.com/globalsign/mgo v0.0.0-20181015135952-eeefdecb41b8 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/gorilla/sessions v1.2.1 // indirect
 	github.com/rs/cors v1.8.0 // indirect
